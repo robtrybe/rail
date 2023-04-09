@@ -9,7 +9,7 @@ function App() {
   const [user, setUser] = useState(null)
 
   const getUser = async () => {
-    const api = axios.create({baseURL: process.env.SERVER_HOST_NAME});
+    const api = axios.create({baseURL: process.env.REACT_SERVER_HOST_NAME});
     const { data } = await api.post('/user');
     setUser(data);
   }
