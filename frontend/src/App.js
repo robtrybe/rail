@@ -9,7 +9,7 @@ function App() {
   const [user, setUser] = useState(null)
 
   const getUser = async () => {
-    const api = axios.create({baseURL: 'https://localhost:3004'});
+    const api = axios.create({baseURL: process.env.SERVER_HOST});
     const { data } = await api.post('/user');
     setUser(data);
   }
